@@ -1,7 +1,4 @@
-/* Controles de juego */
 
-    
-  
 * {
     box-sizing: border-box;
 }
@@ -10,6 +7,44 @@ body {
     font-size: 14px;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    /*background-color: #333;*/
+}
+
+.menu {
+    /* La sintaxis vieja, obsoleta, pero todavía necesaria, con prefijo, para Opera y navegadores basados en WebKit-based */
+    background: -prefix-linear-gradient(top, blue, white);
+
+    /* La nueva sintaxis necesaria para navegadores apegados al estandar (IE 10 y Firefox 10 en adelante), sin prefijo */
+    background: linear-gradient(to bottom, blue, white);
+}
+  
+.menu li {
+    float: left;
+    padding: 25px;
+}
+  
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+.menu li a:hover:not(.active) {
+    background-color: #111;
+}
+  
+.menu .active {
+    background-color: #04AA6D;
+}
+
+/* Controles de juego */
 .v172_948 {
     width: 480px;
     height: 530px;
@@ -84,12 +119,7 @@ body {
 }
 
 /* Home usuario logueado */
-* {
-    box-sizing: border-box;
-  }
-  body {
-    font-size: 14px;
-  }
+
   .v67_342 {
     width: 100%;
     height: 1748px;
@@ -102,13 +132,6 @@ body {
   }
 
   /* Home */ 
-  * {
-    box-sizing: border-box;
-}
-
-body {
-    font-size: 14px;
-}
 
 .v55_438 {
     width: 100%;
@@ -160,14 +183,6 @@ body {
 }
 
 /*Template juego */
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-size: 14px;
-}
-
 .v55_416 {
     width: 100%;
     height: 2071px;
@@ -271,14 +286,6 @@ body {
 }
 
 /* Lista de juegos */
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-size: 14px;
-}
-
 .v82_3072 {
     width: 100%;
     height: 2888px;
@@ -305,14 +312,6 @@ body {
     overflow: hidden;
 }
 /* Registro usuario */
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-size: 14px;
-}
 
 .v170_781 {
     width: 100%;
@@ -427,14 +426,6 @@ body {
 }
 
 /* Administrar perfil */
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-size: 14px;
-}
-
 .v170_736 {
     width: 989px;
     height: 1054px;
@@ -641,14 +632,6 @@ body {
 }
 
 /* Loguin */
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-size: 14px;
-}
-
 .v170_762 {
     width: 989px;
     height: 1054px;
@@ -741,4 +724,119 @@ body {
     opacity: 1;
     text-align: left;
 }
+
+/* Galeria de imagenes */
+.main-title{
+    color: #2d2d2d;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 0.7em 0;
+  }
+  
+  .container{
+    padding: 1em 0;
+    float: left;
+    width: 50%;
+  }
+  @media screen and (max-width: 640px){
+    .container{
+      display: block;
+      width: 100%;
+    }
+  }
+  
+  @media screen and (min-width: 900px){
+    .container{
+      width: 33.33333%;
+    }
+  }
+  
+  .container .title{
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .content {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .content .content-overlay {
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+  }
+  
+  .content:hover .content-overlay{
+    opacity: 1;
+  }
+  
+  .content-image{
+    width: 100%;
+  }
+  
+  .content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .content:hover .content-details{
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+  
+  .content-details h3{
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+  
+  .content-details p{
+    color: #fff;
+    font-size: 0.8em;
+  }
+  
+  .fadeIn-bottom{
+    top: 80%;
+  }
+  
+  .fadeIn-top{
+    top: 20%;
+  }
+  
+  .fadeIn-left{
+    left: 20%;
+  }
+  
+  .fadeIn-right{
+    left: 80%;
+  }
 
