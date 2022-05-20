@@ -1,48 +1,104 @@
 
 * {
     box-sizing: border-box;
-}
-
+  }
+  
 body {
-    font-size: 14px;
+font-family: Arial;
+padding: 3px;
+background: #f1f1f1;
 }
-
+  
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0px;
+    list-style: none;
+	padding: 0;
+	margin: 0;
+}
+  
+/* Style the top navigation bar */
+.topnav {
     overflow: hidden;
-    /*background-color: #333;*/
+    background-color: #333;
 }
 
-.menu {
-    /* La sintaxis vieja, obsoleta, pero todavía necesaria, con prefijo, para Opera y navegadores basados en WebKit-based */
-    background: -prefix-linear-gradient(top, blue, white);
-
-    /* La nueva sintaxis necesaria para navegadores apegados al estandar (IE 10 y Firefox 10 en adelante), sin prefijo */
-    background: linear-gradient(to bottom, blue, white);
-}
-  
-.menu li {
+/* Style the topnav links */
+.topnav a {
     float: left;
-    padding: 25px;
-}
-  
-.menu li a {
     display: block;
-    color: white;
+    color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
+
+#menu li {
+	float: left;
+	margin: 0 0.15em;
+	border: 5px groove #FFAA33;
+}
+
+#menu li a {
+	background-color: #FFC0CB;
+	height: 2em;
+	line-height: 2em;
+	float: left;
+	width: 9em;
+	display: block;
+	border: 0.1em solid #dcdce9;
+	color: #0d2474;
+	text-decoration: none;
+	text-align: center;
+}
+
+#menu li a:hover{background-color: #FF6347;}
   
-.menu li a:hover:not(.active) {
-    background-color: #111;
+/* Change color on hover */
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+
+/* Style the header */
+.header {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the footer */
+  .footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    /*text-align: center;*/
+  }
+
+.footer ul li{
+    display: inline-block;
+    text-align:center;
 }
   
-.menu .active {
-    background-color: #04AA6D;
-}
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
 
 /* Controles de juego */
 .v172_948 {
