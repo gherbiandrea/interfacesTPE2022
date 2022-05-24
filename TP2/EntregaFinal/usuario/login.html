@@ -5,47 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login</title>
 </head>
 
 <body>
-  
-
-    <head>
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-    </head>
-
-        <div class="v170_762">
-            <span class="v170_763">Iniciar sesión</span>
-            <span class="v170_764">o</span>
-            <span class="v170_765">Email: </span>
-            <span class="v170_766">Contraseña: </span>
-            <div class="name"></div>
-            <div class="name"></div>
-            <div class="name"></div>
-            <div class="name"></div>
-            <div class="name"></div>
-            <div class="name"></div>
-            <span class="v170_771">¿Todavía no tienes una cuenta?</span>
-            <span class="v170_772">¿Olvidaste tu usuario o contraseña?</span>
-            <div class="name"></div>
+    <div class="contenido-loguin">
+        <div>
+            <h2 class="titulo-loguin color-primario-5">Iniciar sesión</h2>
         </div>
-    </body>
-
-        
-      
-    <section>
-        <h1>Iniciar session</h1>
-        <input type="button" value="Facebook">
-        <input type="button" value="Gmail">
-        <p>o</p>
-        <form action="POST">
-            <label for="">Usuario:</label><input type="text">
-            <label for="">Password:</label><input type="text">
-            <input type="button" value="Ingresar">
+        <form action="POST"></form>
+            <div>
+                <button id="facebook-login">
+                    <i class="fa fa-facebook-f"></i> Facebook</button>
+                <button id="google-login">Gloogle</button>
+            </div>
+            <div>
+                <p class="p-loguin">o</p>  <!--v170_764-->
+            </div>
+            <div>
+                <label class="color-primario-1" for="email">Email:</label>
+                <input type="email" name="email" id="email" />
+            </div>
+            <div>
+                <label class="color-primario-1" for="contraseña">Contraseña:</label>
+                <input type="contraseña" name="contraseña" id="contraseña" />
+            </div>
+            <div>
+                <p class="p-loguin">¿Olvidaste tu usuario o contraseña?</p>
+            </div>
+            <div>
+                <button id="btn-ingresar-login" class="boton-oscuro">Ingresar</button>
+            </div>    
+            <div>
+                <p class="p-loguin">¿Todavía no tienes una cuenta?</p>
+            </div>
         </form>
-    </section>
-    
+    </div>
+
 </body>
+
 </html>
